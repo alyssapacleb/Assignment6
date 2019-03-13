@@ -13,6 +13,7 @@
 		60C1C3C62239630000F43FAE /* group21_assignment6.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60C1C3C42239630000F43FAE /* group21_assignment6.xcdatamodeld */; };
 		60C1C3C82239630100F43FAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60C1C3C72239630100F43FAE /* Assets.xcassets */; };
 		60C1C3CB2239630100F43FAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60C1C3C92239630100F43FAE /* LaunchScreen.storyboard */; };
+		60C1C3D32239674E00F43FAE /* AdventurerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C1C3D22239674E00F43FAE /* AdventurerTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		60C1C3C72239630100F43FAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60C1C3CA2239630100F43FAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60C1C3CC2239630100F43FAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60C1C3D22239674E00F43FAE /* AdventurerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventurerTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				60C1C3BD2239630000F43FAE /* AppDelegate.swift */,
 				60C1C3BF2239630000F43FAE /* ViewController.swift */,
 				60C1C3C12239630000F43FAE /* Main.storyboard */,
+				60C1C3D22239674E00F43FAE /* AdventurerTableViewController.swift */,
 				60C1C3C72239630100F43FAE /* Assets.xcassets */,
 				60C1C3C92239630100F43FAE /* LaunchScreen.storyboard */,
 				60C1C3CC2239630100F43FAE /* Info.plist */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60C1C3C02239630000F43FAE /* ViewController.swift in Sources */,
+				60C1C3D32239674E00F43FAE /* AdventurerTableViewController.swift in Sources */,
 				60C1C3BE2239630000F43FAE /* AppDelegate.swift in Sources */,
 				60C1C3C62239630000F43FAE /* group21_assignment6.xcdatamodeld in Sources */,
 			);
