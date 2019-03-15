@@ -8,47 +8,45 @@
 
 import UIKit
 
-class RecruitmentViewController: UIViewController, UITextFieldDelegate {
+class RecruitmentViewController: UIViewController, UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
+    // Outlets
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var classTextField: UITextField!
     @IBOutlet weak var AdventurersCollectionView: UICollectionView!
     
-    var newName : String = ""
-    var newClass : String = ""
-    
+    // Button actions
     @IBAction func cancelRecruitment(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func saveRecruit(_ sender: Any) {
-        newName = nameTextField.text!
-        newClass = classTextField.text!
         self.addAdventurer()
     }
+    
+    // Collection Cell Identifier
+    let indentifier = "AdventurerCollectionCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    // Check text field
+    func addAdventurer() {
+        if !(nameTextField.text!.trimmingCharacters(in: .whitespaces).isEmpty) && !(classTextField.text!.trimmingCharacters(in: .whitespaces).isEmpty){
+            print("yes")
+            self.dismiss(animated: true, completion: nil)
+        } else { print("Please enter a valid name and class, asshole.")}
+        
     }
     
-    func addAdventurer() {
-        if (!(newName.trimmingCharacters(in: .whitespaces).isEmpty)) {
-            if (!(newClass.trimmingCharacters(in: .whitespaces).isEmpty)) {
-                print("yes")
-                self.dismiss(animated: true, completion: nil)
-            }
-        } else {
-            print("Please enter a valid name and class, asshole.")
-            nameTextField.text = ""
-            classTextField.text = ""
-        }
-        
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        <#code#>
     }
     // MARK: - Navigation
 
