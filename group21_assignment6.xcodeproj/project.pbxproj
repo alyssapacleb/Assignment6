@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		603648A4223C1210009089B0 /* bear1 Cropped.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 603648A3223C120F009089B0 /* bear1 Cropped.jpg */; };
+		603648A9223C1225009089B0 /* bear4 Cropped.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 603648A5223C1225009089B0 /* bear4 Cropped.jpg */; };
+		603648AA223C1225009089B0 /* bear5 Cropped.png in Resources */ = {isa = PBXBuildFile; fileRef = 603648A6223C1225009089B0 /* bear5 Cropped.png */; };
+		603648AB223C1225009089B0 /* bear3 Cropped.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 603648A7223C1225009089B0 /* bear3 Cropped.jpg */; };
+		603648AC223C1225009089B0 /* bear2 Cropped.png in Resources */ = {isa = PBXBuildFile; fileRef = 603648A8223C1225009089B0 /* bear2 Cropped.png */; };
 		60C1C3BE2239630000F43FAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C1C3BD2239630000F43FAE /* AppDelegate.swift */; };
 		60C1C3C02239630000F43FAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C1C3BF2239630000F43FAE /* ViewController.swift */; };
 		60C1C3C32239630000F43FAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60C1C3C12239630000F43FAE /* Main.storyboard */; };
@@ -21,6 +26,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		603648A3223C120F009089B0 /* bear1 Cropped.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "bear1 Cropped.jpg"; path = "../../../Downloads/bear1 Cropped.jpg"; sourceTree = "<group>"; };
+		603648A5223C1225009089B0 /* bear4 Cropped.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "bear4 Cropped.jpg"; path = "../../../Downloads/bear4 Cropped.jpg"; sourceTree = "<group>"; };
+		603648A6223C1225009089B0 /* bear5 Cropped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bear5 Cropped.png"; path = "../../../Downloads/bear5 Cropped.png"; sourceTree = "<group>"; };
+		603648A7223C1225009089B0 /* bear3 Cropped.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "bear3 Cropped.jpg"; path = "../../../Downloads/bear3 Cropped.jpg"; sourceTree = "<group>"; };
+		603648A8223C1225009089B0 /* bear2 Cropped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bear2 Cropped.png"; path = "../../../Downloads/bear2 Cropped.png"; sourceTree = "<group>"; };
 		60C1C3BA2239630000F43FAE /* group21_assignment6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = group21_assignment6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60C1C3BD2239630000F43FAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60C1C3BF2239630000F43FAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +80,11 @@
 				60C1C3BF2239630000F43FAE /* ViewController.swift */,
 				60C1C3C12239630000F43FAE /* Main.storyboard */,
 				60C1C3C72239630100F43FAE /* Assets.xcassets */,
+				603648A8223C1225009089B0 /* bear2 Cropped.png */,
+				603648A7223C1225009089B0 /* bear3 Cropped.jpg */,
+				603648A5223C1225009089B0 /* bear4 Cropped.jpg */,
+				603648A6223C1225009089B0 /* bear5 Cropped.png */,
+				603648A3223C120F009089B0 /* bear1 Cropped.jpg */,
 				60C1C3C92239630100F43FAE /* LaunchScreen.storyboard */,
 				60C1C3CC2239630100F43FAE /* Info.plist */,
 				60C1C3C42239630000F43FAE /* group21_assignment6.xcdatamodeld */,
@@ -140,8 +155,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				603648A9223C1225009089B0 /* bear4 Cropped.jpg in Resources */,
+				603648A4223C1210009089B0 /* bear1 Cropped.jpg in Resources */,
+				603648AA223C1225009089B0 /* bear5 Cropped.png in Resources */,
 				60C1C3CB2239630100F43FAE /* LaunchScreen.storyboard in Resources */,
 				60C1C3C82239630100F43FAE /* Assets.xcassets in Resources */,
+				603648AC223C1225009089B0 /* bear2 Cropped.png in Resources */,
+				603648AB223C1225009089B0 /* bear3 Cropped.jpg in Resources */,
 				60C1C3C32239630000F43FAE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
