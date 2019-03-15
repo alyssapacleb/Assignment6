@@ -179,6 +179,7 @@
                         <viewLayoutGuide key="safeArea" id="aaB-pj-6cS"/>
                     </view>
                     <connections>
+                        <outlet property="AdventurersCollectionView" destination="drt-xb-khe" id="K6v-zo-d33"/>
                         <outlet property="classTextField" destination="87l-ub-tns" id="tog-lI-OO0"/>
                         <outlet property="nameTextField" destination="87l-ub-tns" id="PSM-aq-0Ma"/>
                     </connections>

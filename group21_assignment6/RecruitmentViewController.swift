@@ -12,6 +12,7 @@ class RecruitmentViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var classTextField: UITextField!
+    @IBOutlet weak var AdventurersCollectionView: UICollectionView!
     
     @IBAction func cancelRecruitment(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
