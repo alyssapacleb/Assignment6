@@ -10,6 +10,10 @@ import UIKit
 
 class QuestViewController: UIViewController {
 
+    @IBAction func endQuest(_ sender: Any) {
+        self.dismiss(animated: true, completion: endQuest)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +25,9 @@ class QuestViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func endQuest() {
+        
+    }
 
     /*
     // MARK: - Navigation

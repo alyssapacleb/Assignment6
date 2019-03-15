@@ -14,14 +14,18 @@ class RecruitmentViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var classTextField: UITextField!
     @IBOutlet weak var AdventurersCollectionView: UICollectionView!
     
+    var newName : String = ""
+    var newClass : String = ""
+    
     @IBAction func cancelRecruitment(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func saveRecruit(_ sender: Any) {
+        newName = nameTextField.text!
+        newClass = classTextField.text!
         self.addAdventurer()
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,10 +38,16 @@ class RecruitmentViewController: UIViewController, UITextFieldDelegate {
     }
     
     func addAdventurer() {
-        if !(nameTextField.text!.trimmingCharacters(in: .whitespaces).isEmpty) && !(classTextField.text!.trimmingCharacters(in: .whitespaces).isEmpty){
-            print("yes")
-            self.dismiss(animated: true, completion: nil)
-        } else { print("Please enter a valid name and class, asshole.")}
+        if (!(newName.trimmingCharacters(in: .whitespaces).isEmpty)) {
+            if (!(newClass.trimmingCharacters(in: .whitespaces).isEmpty)) {
+                print("yes")
+                self.dismiss(animated: true, completion: nil)
+            }
+        } else {
+            print("Please enter a valid name and class, asshole.")
+            nameTextField.text = ""
+            classTextField.text = ""
+        }
         
     }
     // MARK: - Navigation
