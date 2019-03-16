@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class RecruitmentViewController: UIViewController, UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
@@ -14,6 +15,12 @@ class RecruitmentViewController: UIViewController, UITextFieldDelegate, UICollec
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var classTextField: UITextField!
     @IBOutlet weak var AdventurersCollectionView: UICollectionView!
+    
+    // Variables
+    var adventurers: [String] = []
+    let identifier = "recruitmentCollectionViewCell"
+    private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
+    private let itemsPerRow: CGFloat = 3
     
     // Button actions
     @IBAction func cancelRecruitment(_ sender: Any) {
@@ -24,12 +31,20 @@ class RecruitmentViewController: UIViewController, UITextFieldDelegate, UICollec
         self.addAdventurer()
     }
     
-    // Collection Cell Identifier
-    let indentifier = "AdventurerCollectionCell"
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        accessPlist()
+        print(adventurers)
+        //AdventurersCollectionView.register(UICollectionViewCell.self, forCellReuseIdentifier: "recruitmentCollectionViewCell")
+    }
+
+    private func accessPlist() {
+        let inputFile = Bundle.main.path(forResource:"Adventurers",
+                                         ofType: "plist")
+        let inputArray = NSArray(contentsOfFile: inputFile!)
+        for item in inputArray as! [String] {
+            adventurers.append(item)
+        }
     }
     
     // Check text field
@@ -41,12 +56,46 @@ class RecruitmentViewController: UIViewController, UITextFieldDelegate, UICollec
         
     }
     
+    // Flow Layout
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        //2
+        let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
+        let availableWidth = view.frame.width - paddingSpace
+        let widthPerItem = availableWidth / itemsPerRow
+        
+        return CGSize(width: widthPerItem, height: widthPerItem)
+    }
+    
+    //3
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        return sectionInsets
+    }
+    
+    // 4
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return sectionInsets.left
+    }
+    
+    // Collection View functions
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        return 10
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        let cell = collectionView
+            .dequeueReusableCell(withReuseIdentifier: "recruitmentCollectionViewCell", for: indexPath) as! RecruitmentCollectionViewCell
+        cell.displayContent(image: UIImage(named: adventurers[indexPath.row])!)
+        return cell
     }
     // MARK: - Navigation
 

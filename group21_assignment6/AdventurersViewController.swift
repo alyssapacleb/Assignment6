@@ -10,6 +10,8 @@ import UIKit
 
 class AdventurersViewController: UIViewController {
 
+    @IBOutlet weak var AdventurersTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

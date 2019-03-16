@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Aj-RV-bRW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Aj-RV-bRW">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -52,6 +53,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="AdventurersTableView" destination="I6s-AR-Bex" id="pMS-6z-YSJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qUU-yD-ME8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -89,23 +93,40 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="drt-xb-khe">
-                                <rect key="frame" x="16" y="238" width="343" height="128"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="drt-xb-khe">
+                                <rect key="frame" x="16" y="239.5" width="343" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="X9c-Ni-Cbp">
-                                    <size key="itemSize" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="0Kt-Tu-bmv"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="X9c-Ni-Cbp">
+                                    <size key="itemSize" width="117" height="117"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="nov-Ot-kGp" customClass="RecruitmentCollectionViewCell" customModule="group21_assignment6" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="recruitmentCollectionViewCell" id="nov-Ot-kGp" customClass="RecruitmentCollectionViewCell" customModule="group21_assignment6" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="5.5" width="117" height="117"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="117" height="117"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OFR-Xs-kA8">
+                                                    <rect key="frame" x="8" y="8" width="101" height="101"/>
+                                                </imageView>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottomMargin" secondItem="OFR-Xs-kA8" secondAttribute="bottom" id="54D-Eh-SxY"/>
+                                            <constraint firstItem="OFR-Xs-kA8" firstAttribute="leading" secondItem="nov-Ot-kGp" secondAttribute="leadingMargin" id="5jI-ry-YOC"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="OFR-Xs-kA8" secondAttribute="trailing" id="b2r-Ux-y1p"/>
+                                            <constraint firstItem="OFR-Xs-kA8" firstAttribute="top" secondItem="nov-Ot-kGp" secondAttribute="topMargin" id="n1Q-yh-Okd"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="OFR-Xs-kA8" id="0ol-zf-hI9"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -125,8 +146,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ew-Nh-MGU">
-                                <rect key="frame" x="16" y="374" width="150" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ew-Nh-MGU">
+                                <rect key="frame" x="16" y="387.5" width="150" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="D9s-ry-KeA"/>
@@ -138,8 +159,8 @@
                                     <action selector="cancelRecruitment:" destination="wiL-0K-F8s" eventType="touchUpInside" id="bgb-ES-gLh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdU-kK-pTc">
-                                <rect key="frame" x="209" y="374" width="150" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdU-kK-pTc">
+                                <rect key="frame" x="209" y="387.5" width="150" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="Cic-3v-Scv"/>
@@ -154,7 +175,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="drt-xb-khe" firstAttribute="top" secondItem="k6c-1z-qeW" secondAttribute="bottom" constant="20" id="5Nj-2y-JhH"/>
                             <constraint firstItem="k6c-1z-qeW" firstAttribute="top" secondItem="DHi-OT-zSs" secondAttribute="bottom" constant="20" id="9yt-GR-EIi"/>
                             <constraint firstItem="zbV-cJ-eh2" firstAttribute="top" secondItem="aaB-pj-6cS" secondAttribute="top" constant="24" id="9za-Ug-aVR"/>
                             <constraint firstItem="C9A-sv-jzy" firstAttribute="top" secondItem="zbV-cJ-eh2" secondAttribute="bottom" constant="24" id="DKs-4k-kZS"/>
@@ -166,6 +186,7 @@
                             <constraint firstItem="DHi-OT-zSs" firstAttribute="leading" secondItem="xfa-t5-H0P" secondAttribute="trailing" constant="5" id="SYD-9D-lyL"/>
                             <constraint firstItem="9Ew-Nh-MGU" firstAttribute="leading" secondItem="aaB-pj-6cS" secondAttribute="leading" constant="16" id="Sg3-FU-vcY"/>
                             <constraint firstItem="rdU-kK-pTc" firstAttribute="width" secondItem="9Ew-Nh-MGU" secondAttribute="width" id="Vvo-kh-8KL"/>
+                            <constraint firstItem="drt-xb-khe" firstAttribute="top" secondItem="k6c-1z-qeW" secondAttribute="bottom" constant="25" id="WWi-LO-VIj"/>
                             <constraint firstItem="aaB-pj-6cS" firstAttribute="trailing" secondItem="87l-ub-tns" secondAttribute="trailing" constant="35" id="XiN-E8-IMz"/>
                             <constraint firstItem="aaB-pj-6cS" firstAttribute="trailing" secondItem="DHi-OT-zSs" secondAttribute="trailing" constant="36" id="b0t-1z-G2L"/>
                             <constraint firstItem="87l-ub-tns" firstAttribute="leading" secondItem="C9A-sv-jzy" secondAttribute="trailing" constant="5" id="cPZ-b2-Cf7"/>

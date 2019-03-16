@@ -13,6 +13,7 @@
 		60C1C3C62239630000F43FAE /* group21_assignment6.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60C1C3C42239630000F43FAE /* group21_assignment6.xcdatamodeld */; };
 		60C1C3C82239630100F43FAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60C1C3C72239630100F43FAE /* Assets.xcassets */; };
 		60C1C3CB2239630100F43FAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60C1C3C92239630100F43FAE /* LaunchScreen.storyboard */; };
+		9629EC48223C94EA00D594FB /* Adventurers.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9629EC47223C94EA00D594FB /* Adventurers.plist */; };
 		965B5390223B109D00CC6F2D /* AdventurersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965B538F223B109D00CC6F2D /* AdventurersViewController.swift */; };
 		965B5392223B10C100CC6F2D /* AdventurersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965B5391223B10C100CC6F2D /* AdventurersTableViewCell.swift */; };
 		965B5394223B10EE00CC6F2D /* RecruitmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965B5393223B10EE00CC6F2D /* RecruitmentViewController.swift */; };
@@ -29,6 +30,7 @@
 		60C1C3C72239630100F43FAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60C1C3CA2239630100F43FAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60C1C3CC2239630100F43FAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9629EC47223C94EA00D594FB /* Adventurers.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Adventurers.plist; sourceTree = "<group>"; };
 		965B538F223B109D00CC6F2D /* AdventurersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventurersViewController.swift; sourceTree = "<group>"; };
 		965B5391223B10C100CC6F2D /* AdventurersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventurersTableViewCell.swift; sourceTree = "<group>"; };
 		965B5393223B10EE00CC6F2D /* RecruitmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitmentViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				965B5393223B10EE00CC6F2D /* RecruitmentViewController.swift */,
 				965B5397223B113B00CC6F2D /* RecruitmentCollectionViewCell.swift */,
 				965B5395223B10FF00CC6F2D /* QuestViewController.swift */,
+				9629EC47223C94EA00D594FB /* Adventurers.plist */,
 			);
 			path = group21_assignment6;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			files = (
 				60C1C3CB2239630100F43FAE /* LaunchScreen.storyboard in Resources */,
 				60C1C3C82239630100F43FAE /* Assets.xcassets in Resources */,
+				9629EC48223C94EA00D594FB /* Adventurers.plist in Resources */,
 				60C1C3C32239630000F43FAE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
