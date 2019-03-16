@@ -9,7 +9,7 @@
 import UIKit
 
 class RecruitmentCollectionViewCell: UICollectionViewCell {
-    
+
     @IBOutlet weak var imageView: UIImageView!
     
     func displayContent(image: UIImage){
