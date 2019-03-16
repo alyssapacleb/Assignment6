@@ -18,6 +18,7 @@ class RecruitmentViewController: UIViewController, UITextFieldDelegate, UICollec
     
     // Variables
     var adventurers: [String] = []
+    var selectedPortrait:UICollectionViewCell?
     let identifier = "recruitmentCollectionViewCell"
     private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
     private let itemsPerRow: CGFloat = 3
@@ -96,6 +97,20 @@ class RecruitmentViewController: UIViewController, UITextFieldDelegate, UICollec
             .dequeueReusableCell(withReuseIdentifier: "recruitmentCollectionViewCell", for: indexPath) as! RecruitmentCollectionViewCell
         cell.displayContent(image: UIImage(named: adventurers[indexPath.row])!)
         return cell
+    }
+    
+    // Show selected cell
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //addToList.append(objectsArray[indexPath.row])
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.layer.borderWidth = 2.0
+        cell?.layer.borderColor = UIColor.gray.cgColor
+        selectedPortrait = cell!
+    }
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        //addToList.append(objectsArray[indexPath.row])
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.layer.borderWidth = 0
     }
     // MARK: - Navigation
 
